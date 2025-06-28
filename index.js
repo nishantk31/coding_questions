@@ -25,6 +25,22 @@ function findSmallest(arr){
     return smallest
 }
 
-const result = findSmallest(arr)
-console.log(result)
+// const result = findSmallest(arr)
+// console.log(result)
 
+
+function findSecondLargest(arr){
+    let largest = arr[0]
+    let largest_index = 0
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]> largest){
+            largest = arr[i]
+            largest_index = i
+        }
+        arr.pop()
+        
+    }
+    return (largest_index)
+}
+const result = findSecondLargest(arr)
+console.log(result)
